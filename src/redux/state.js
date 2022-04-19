@@ -1,4 +1,4 @@
-let state = {
+export let state = {
     DialogsPage: {
         dialogs: [
             {id: 1, name: 'John'},
@@ -25,5 +25,14 @@ export let addPost = (postMessage) => {
         likesCount: 0
     };
     state.DialogsPage.push(newPost);
+}
+
+export let addPostX = (postMessage) => {
+    let newPost = {
+        id: state.PostsPage.posts.length+1,
+        message:postMessage,
+        likesCount: 0
+    };
+    state.PostsPage.posts.push(newPost);
 }
 export default state;
